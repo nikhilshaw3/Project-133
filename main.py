@@ -15,8 +15,8 @@ headers = rows[0]
 star_data = rows[1:]
 
 df = pd.read_csv("Stars.csv")
-solar_mass_list = df["mass"].tolist()
-solar_radius_list = df["radius"].tolist()
+solar_mass_list = df["Mass"].tolist()
+solar_radius_list = df["Radius"].tolist()
 
 solar_mass_list.pop(0)
 solar_radius_list.pop(0)
@@ -40,7 +40,7 @@ print(star_solar_radius_si_unit)
 
 star_masses = star_solar_mass_si_unit
 star_radiuses = star_solar_radius_si_unit
-star_names = df["star_names"].tolist()
+star_names = df["Star Names"].tolist()
 star_names.pop(0)
 
 star_gravities = []
@@ -51,10 +51,10 @@ for index,data in enumerate(star_names):
 
 print(star_gravities)
 
-mass_list = df["mass"].tolist()
+mass_list = df["Mass"].tolist()
 mass_list.pop(0)
 
-radius_list = df["radius"].tolist()
+radius_list = df["Radius"].tolist()
 radius_list.pop(0)
 
 mass_radius_column = star_data.iloc[:, 2:4].values
