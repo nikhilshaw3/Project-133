@@ -15,8 +15,8 @@ headers = rows[0]
 star_data = rows[1:]
 
 df = pd.read_csv("Stars.csv")
-solar_mass_list = df["solar_mass"].tolist()
-solar_radius_list = df["solar_radius"].tolist()
+solar_mass_list = df["mass"].tolist()
+solar_radius_list = df["radius"].tolist()
 
 solar_mass_list.pop(0)
 solar_radius_list.pop(0)
